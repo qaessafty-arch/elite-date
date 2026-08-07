@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mr.0 Elite Network</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Login Overlay -->
+    <div id="login-overlay" class="overlay active">
+        <div class="login-card">
+            <h1>Elite Network</h1>
+            <p>Enter as Owner (Mr.0)</p>
+            <input type="password" id="login-input" placeholder="Password">
+            <button id="login-btn">Access #0</button>
+        </div>
+    </div>
+
+    <!-- Main App -->
+    <div id="app" class="app hidden">
+        <!-- Header -->
+        <header>
+            <h1 id="user-name">Mr.0</h1>
+            <span id="user-id">#0</span>
+            <div id="user-badge" class="badge black"></div>
+        </header>
+
+        <!-- Content Sections -->
+        <main>
+            <!-- Home Feed -->
+            <section id="home" class="section active">
+                <h2>Home Feed</h2>
+                <div id="feed"></div>
+            </section>
+
+            <!-- Chats (Hacker Mode) -->
+            <section id="chats" class="section">
+                <h2>Chats</h2>
+                <div id="chat-list"></div>
+                <div id="chat-input-container">
+                    <input type="text" id="chat-input" placeholder="Type message...">
+                    <button id="send-chat">Send</button>
+                </div>
+            </section>
+
+            <!-- Profile -->
+            <section id="profile" class="section">
+                <h2>Profile</h2>
+                <div id="profile-info">
+                    <p>ID: <span id="profile-id">#0</span></p>
+                    <p>Name: <span id="profile-name">Mr.0</span></p>
+                    <p>Status: <span id="profile-status">Owner</span></p>
+                    <p>Badge: <span id="profile-badge">Black Badge (Elite)</span></p>
+                </div>
+            </section>
+        </main>
+
+        <!-- Bottom Navigation -->
+        <nav class="bottom-nav">
+            <button class="nav-btn active" data-section="home">
+                <span>🏠</span>
+                <span>Home</span>
+            </button>
+            <button class="nav-btn" data-section="chats">
+                <span>💬</span>
+                <span>Chats</span>
+            </button>
+            <button class="nav-btn" data-section="profile">
+                <span>👤</span>
+                <span>Profile</span>
+            </button>
+        </nav>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
