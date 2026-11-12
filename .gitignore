@@ -1,0 +1,15 @@
+node_modules
+.next
+out
+.env
+.env.local
+.env.*.local
+*.tsbuildinfo
+next-env.d.ts
+storage/uploads/*
+storage/outbox/*
+!storage/**/.gitkeep
+assets-src/**/*.png
+tests/e2e/screenshots
+.DS_Store
+tests/e2e/tmp
