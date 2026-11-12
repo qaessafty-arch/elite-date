@@ -158,11 +158,15 @@ export function ProductCard({
                     setColor(c.name);
                     setPicking(false);
                   }}
-                  className={`h-[1.125rem] w-[1.125rem] rounded-full border border-black/15 outline-offset-2 ${
-                    c.name === color ? 'outline outline-1 outline-ink' : ''
-                  }`}
-                  style={{ backgroundColor: c.hex }}
-                />
+                  className="grid h-6 w-6 place-items-center"
+                >
+                  <span
+                    className={`h-[1.125rem] w-[1.125rem] rounded-full border border-black/15 ${
+                      c.name === color ? 'outline outline-1 outline-offset-2 outline-ink' : ''
+                    }`}
+                    style={{ backgroundColor: c.hex }}
+                  />
+                </button>
               ))}
               <span className="small ml-1 text-mute">{colors.length === 1 ? colors[0].name : `${colors.length} colours`}</span>
             </div>

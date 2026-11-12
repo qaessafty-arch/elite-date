@@ -48,7 +48,7 @@ export function AnnouncementBar({ messages }: { messages: string[] }) {
       </div>
       <button
         type="button"
-        className="absolute right-2 top-1/2 grid h-9 w-9 -translate-y-1/2 place-items-center rounded-full hover:bg-white/10"
+        className="absolute right-1 top-1/2 grid h-10 w-10 -translate-y-1/2 place-items-center rounded-full hover:bg-white/10"
         aria-label="Dismiss announcements"
         onClick={() => {
           setHidden(true);
