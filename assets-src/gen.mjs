@@ -1,0 +1,55 @@
+// Source prompts for every Higgsfield-generated image used by the store.
+import { writeFileSync } from 'node:fs';
+const NO = ' Photograph only, no text, no typography, no borders, no logos.';
+const FILM = ' Medium format film, natural light, soft grain.';
+const studio = (subject, crop = 'full length head to toe') =>
+  `Studio e-commerce fashion photograph, ${subject}, against a seamless warm bone-coloured paper backdrop, soft diffused daylight from the left, ${crop}, neutral relaxed pose, clean minimal product-focused image.` + NO;
+const still = (subject) =>
+  `Studio product still life photograph, ${subject}, on a warm bone-coloured seamless paper surface and backdrop, soft diffused daylight from the left with a gentle shadow, centred, clean minimal e-commerce image.` + NO;
+const legs = 'cropped from waist to feet';
+const J = [
+  ['campaign/hero', '16:9', 'Full-bleed cinematic fashion campaign photograph, wide landscape shot. A woman in a long camel wool overcoat and a man in a loden-green cotton chore jacket with ecru trousers walk across a pale limestone quarry terrace at low golden autumn sun, long shadows, wind in the coat. The two figures are in the right third of the frame; the left two thirds is open pale stone ground and soft hazy sky. Muted palette of bone, camel, olive and warm stone.' + FILM + ' A single continuous photograph edge to edge, no magazine layout.' + NO],
+  ['campaign/atelier', '3:4', "Documentary photograph inside a small tailoring workshop: close view of a pattern cutter's hands marking camel wool cloth with tailor's chalk on a worn wooden cutting table, brass shears and paper pattern pieces beside, soft window daylight from the left, warm bone and camel tones, shallow depth of field." + FILM + NO],
+  ['campaign/cloth', '1:1', 'Still life photograph, close overhead view of neatly folded stacks of fabric: camel wool melton, olive cotton twill, ecru canvas and dark indigo selvedge denim with the red selvedge line visible, on a pale stone surface, soft raking daylight showing the weave texture, muted warm palette.' + NO],
+  ['campaign/low-sun', '16:9', 'Full-bleed cinematic fashion campaign photograph at dusk, wide landscape shot. A man in a dark ink quilted liner vest over a bone-coloured heavyweight hoodie and a woman in a stone trench coat sit on wide concrete steps of a brutalist building, last warm light catching their faces, deep olive-green shadows, calm confident mood. Figures left of centre, architecture receding to the right. Palette of deep loden green, bone and brass.' + FILM + ' One continuous photograph.' + NO],
+  ['collections/new-arrivals', '3:4', 'Editorial fashion photograph, a woman in a belted stone-beige cotton trench coat walking past a pale plaster wall in soft morning light, mid-stride, full length, natural expression, muted palette of bone and stone.' + FILM + NO],
+  ['collections/best-sellers', '3:4', 'Editorial fashion photograph, a man in a white heavyweight boxy t-shirt, dark indigo straight-leg selvedge jeans with a turned cuff and minimal white leather sneakers, leaning against a sunlit pale concrete wall, full length, relaxed, hard afternoon shadow, muted warm palette.' + FILM + NO],
+  ['collections/low-sun', '3:4', 'Editorial fashion portrait, a woman in a camel wool overcoat with the collar turned up, three-quarter crop, standing in low golden autumn sun in front of pale limestone rock, wind moving her dark hair, calm gaze away from camera, palette of camel, bone and warm stone.' + FILM + NO],
+  ['collections/streetwear', '3:4', 'Streetwear editorial photograph, a young man in an oversized bone-coloured heavyweight hoodie, dark ribbed merino beanie and olive work trousers standing in a raw concrete underpass, overcast soft light, full length, hands in pocket, confident, palette of concrete grey, bone and olive, no graffiti.' + FILM + NO],
+  ['collections/essentials', '3:4', studio('a woman in a plain white boxy t-shirt tucked into ecru wide pleated trousers')],
+  ['collections/limited-edition', '3:4', 'Dramatic editorial fashion photograph, close three-quarter view of a man wearing a dark ink diamond-quilted liner vest with brass snap buttons over a charcoal knit, a hard slash of late sunlight across the quilting, deep olive-black shadow background, moody and precise.' + FILM + NO],
+  ['products/arden-overcoat-camel', '3:4', studio('a woman wearing a long camel wool overcoat, single-breasted, over a cream knit and dark trousers')],
+  ['products/arden-overcoat-charcoal', '3:4', studio('a woman wearing a long charcoal grey wool overcoat, single-breasted, over a cream knit and dark trousers')],
+  ['products/field-chore-jacket-loden', '3:4', studio('a man wearing a loden olive-green cotton twill chore jacket with three patch pockets and horn buttons, over a white t-shirt, with ecru trousers', 'three-quarter length crop from head to knee')],
+  ['products/field-chore-jacket-ecru', '3:4', studio('a man wearing an ecru off-white cotton twill chore jacket with three patch pockets and horn buttons, over a white t-shirt, with dark indigo jeans', 'three-quarter length crop from head to knee')],
+  ['products/kiln-hoodie-bone', '3:4', studio('a man wearing a plain bone off-white heavyweight cotton hoodie, boxy fit, no print, with olive trousers', 'three-quarter length crop from head to knee')],
+  ['products/kiln-hoodie-ink', '3:4', studio('a woman wearing a plain black heavyweight cotton hoodie, boxy oversized fit, no print, with ecru trousers', 'three-quarter length crop from head to knee')],
+  ['products/slate-tee-white', '3:4', studio('a woman wearing a plain white heavyweight boxy t-shirt, no print, with dark indigo jeans', 'three-quarter length crop from head to hip')],
+  ['products/slate-tee-ink', '3:4', studio('a man wearing a plain black heavyweight boxy t-shirt, no print, with ecru trousers', 'three-quarter length crop from head to hip')],
+  ['products/oxford-shirt-blue', '3:4', studio('a man wearing a pale blue cotton oxford button-down shirt, untucked, with ecru trousers', 'three-quarter length crop from head to hip')],
+  ['products/oxford-shirt-white', '3:4', studio('a man wearing a crisp white cotton oxford button-down shirt, untucked, with dark indigo jeans', 'three-quarter length crop from head to hip')],
+  ['products/poplin-shirt-white', '3:4', studio('a woman wearing an oversized crisp white cotton poplin shirt with a relaxed collar, half tucked into charcoal trousers', 'three-quarter length crop from head to hip')],
+  ['products/poplin-shirt-stripe', '3:4', studio('a woman wearing an oversized blue and white fine-striped cotton poplin shirt with a relaxed collar, half tucked into ecru trousers', 'three-quarter length crop from head to hip')],
+  ['products/pleated-trouser-charcoal', '3:4', studio('a woman wearing charcoal grey wool wide-leg trousers with double front pleats and a high waist, with a white t-shirt tucked in and black loafers', legs)],
+  ['products/pleated-trouser-ecru', '3:4', studio('a woman wearing ecru off-white wide-leg trousers with double front pleats and a high waist, with a black t-shirt tucked in and tan loafers', legs)],
+  ['products/work-trouser-loden', '3:4', studio('a man wearing loden olive-green cotton twill tapered work trousers with a white t-shirt and brown suede chelsea boots', legs)],
+  ['products/work-trouser-ink', '3:4', studio('a man wearing black cotton twill tapered work trousers with a white t-shirt and white leather sneakers', legs)],
+  ['products/selvedge-jean-indigo', '3:4', studio('a man wearing dark raw indigo straight-leg selvedge denim jeans with a turned cuff showing the red selvedge line, with a white t-shirt and white leather sneakers', legs)],
+  ['products/selvedge-jean-detail', '3:4', 'Close-up product detail photograph of the turned cuff of dark raw indigo selvedge denim jeans showing the white and red selvedge edge and chain-stitched hem, resting on a warm bone-coloured surface, soft daylight, crisp fabric texture.' + NO],
+  ['products/barrel-jean-blue', '3:4', studio('a woman wearing mid-blue washed high-rise barrel-leg denim jeans with a white t-shirt tucked in and tan leather loafers', legs)],
+  ['products/barrel-jean-back', '3:4', studio('rear view of a woman wearing mid-blue washed high-rise barrel-leg denim jeans with plain back pockets, a white t-shirt tucked in and tan leather loafers', legs)],
+  ['products/court-sneaker-white', '3:4', still('a pair of minimal white full-grain leather low-top court sneakers with white rubber cupsoles and no branding, three-quarter side view')],
+  ['products/court-sneaker-ink', '3:4', still('a pair of minimal black full-grain leather low-top court sneakers with off-white rubber cupsoles and no branding, three-quarter side view')],
+  ['products/ridge-boot-brown', '3:4', still('a pair of dark brown suede chelsea boots with elastic side gussets and a leather sole, three-quarter side view')],
+  ['products/ridge-boot-worn', '3:4', studio('close view of a man wearing dark brown suede chelsea boots with loden olive tapered trousers', 'cropped from knee to feet')],
+  ['products/merino-beanie-ink', '3:4', studio('a man wearing a black ribbed merino wool beanie with a turned cuff and a charcoal knit sweater', 'head and shoulders portrait crop')],
+  ['products/merino-beanie-ochre', '3:4', still('a single ochre brass-yellow ribbed merino wool beanie with a turned cuff, laid flat, top view')],
+  ['products/market-tote-ecru', '3:4', studio('a woman carrying a large plain ecru heavy cotton canvas tote bag with long tan leather handles on her shoulder, wearing a white shirt and dark trousers, no print on the bag', 'three-quarter length crop from shoulder to knee')],
+  ['products/market-tote-still', '3:4', still('a large plain ecru heavy cotton canvas tote bag with long tan leather handles standing upright, front view, no print')],
+  ['products/liner-vest-ink', '3:4', studio('a man wearing a black diamond-quilted collarless liner vest with brass snap buttons over a bone off-white long-sleeve t-shirt, with dark trousers', 'three-quarter length crop from head to hip')],
+  ['products/liner-vest-loden', '3:4', studio('a woman wearing a loden olive-green diamond-quilted collarless liner vest with brass snap buttons over a white long-sleeve t-shirt, with ecru trousers', 'three-quarter length crop from head to hip')],
+  ['products/wrap-trench-stone', '3:4', studio('a woman wearing a long stone-beige cotton gabardine trench coat with a tied belt and storm flap, over a white shirt and dark trousers')],
+  ['products/wrap-trench-detail', '3:4', 'Close-up product detail photograph of the tied belt, horn buckle and storm flap of a stone-beige cotton gabardine trench coat worn by a woman, warm bone-coloured studio backdrop, soft daylight, crisp fabric texture.' + NO],
+];
+writeFileSync(new URL('./prompts.json', import.meta.url), JSON.stringify(J.map(([name, aspect_ratio, prompt]) => ({ name, aspect_ratio, prompt, model: 'soul_2' })), null, 1));
+console.log(J.length);

@@ -1,0 +1,254 @@
+[
+ {
+  "name": "campaign/hero",
+  "aspect_ratio": "16:9",
+  "prompt": "Full-bleed cinematic fashion campaign photograph, wide landscape shot. A woman in a long camel wool overcoat and a man in a loden-green cotton chore jacket with ecru trousers walk across a pale limestone quarry terrace at low golden autumn sun, long shadows, wind in the coat. The two figures are in the right third of the frame; the left two thirds is open pale stone ground and soft hazy sky. Muted palette of bone, camel, olive and warm stone. Medium format film, natural light, soft grain. A single continuous photograph edge to edge, no magazine layout. Photograph only, no text, no typography, no borders, no logos.",
+  "model": "soul_2"
+ },
+ {
+  "name": "campaign/atelier",
+  "aspect_ratio": "3:4",
+  "prompt": "Documentary photograph inside a small tailoring workshop: close view of a pattern cutter's hands marking camel wool cloth with tailor's chalk on a worn wooden cutting table, brass shears and paper pattern pieces beside, soft window daylight from the left, warm bone and camel tones, shallow depth of field. Medium format film, natural light, soft grain. Photograph only, no text, no typography, no borders, no logos.",
+  "model": "soul_2"
+ },
+ {
+  "name": "campaign/cloth",
+  "aspect_ratio": "1:1",
+  "prompt": "Still life photograph, close overhead view of neatly folded stacks of fabric: camel wool melton, olive cotton twill, ecru canvas and dark indigo selvedge denim with the red selvedge line visible, on a pale stone surface, soft raking daylight showing the weave texture, muted warm palette. Photograph only, no text, no typography, no borders, no logos.",
+  "model": "soul_2"
+ },
+ {
+  "name": "campaign/low-sun",
+  "aspect_ratio": "16:9",
+  "prompt": "Full-bleed cinematic fashion campaign photograph at dusk, wide landscape shot. A man in a dark ink quilted liner vest over a bone-coloured heavyweight hoodie and a woman in a stone trench coat sit on wide concrete steps of a brutalist building, last warm light catching their faces, deep olive-green shadows, calm confident mood. Figures left of centre, architecture receding to the right. Palette of deep loden green, bone and brass. Medium format film, natural light, soft grain. One continuous photograph. Photograph only, no text, no typography, no borders, no logos.",
+  "model": "soul_2"
+ },
+ {
+  "name": "collections/new-arrivals",
+  "aspect_ratio": "3:4",
+  "prompt": "Editorial fashion photograph, a woman in a belted stone-beige cotton trench coat walking past a pale plaster wall in soft morning light, mid-stride, full length, natural expression, muted palette of bone and stone. Medium format film, natural light, soft grain. Photograph only, no text, no typography, no borders, no logos.",
+  "model": "soul_2"
+ },
+ {
+  "name": "collections/best-sellers",
+  "aspect_ratio": "3:4",
+  "prompt": "Editorial fashion photograph, a man in a white heavyweight boxy t-shirt, dark indigo straight-leg selvedge jeans with a turned cuff and minimal white leather sneakers, leaning against a sunlit pale concrete wall, full length, relaxed, hard afternoon shadow, muted warm palette. Medium format film, natural light, soft grain. Photograph only, no text, no typography, no borders, no logos.",
+  "model": "soul_2"
+ },
+ {
+  "name": "collections/low-sun",
+  "aspect_ratio": "3:4",
+  "prompt": "Editorial fashion portrait, a woman in a camel wool overcoat with the collar turned up, three-quarter crop, standing in low golden autumn sun in front of pale limestone rock, wind moving her dark hair, calm gaze away from camera, palette of camel, bone and warm stone. Medium format film, natural light, soft grain. Photograph only, no text, no typography, no borders, no logos.",
+  "model": "soul_2"
+ },
+ {
+  "name": "collections/streetwear",
+  "aspect_ratio": "3:4",
+  "prompt": "Streetwear editorial photograph, a young man in an oversized bone-coloured heavyweight hoodie, dark ribbed merino beanie and olive work trousers standing in a raw concrete underpass, overcast soft light, full length, hands in pocket, confident, palette of concrete grey, bone and olive, no graffiti. Medium format film, natural light, soft grain. Photograph only, no text, no typography, no borders, no logos.",
+  "model": "soul_2"
+ },
+ {
+  "name": "collections/essentials",
+  "aspect_ratio": "3:4",
+  "prompt": "Studio e-commerce fashion photograph, a woman in a plain white boxy t-shirt tucked into ecru wide pleated trousers, against a seamless warm bone-coloured paper backdrop, soft diffused daylight from the left, full length head to toe, neutral relaxed pose, clean minimal product-focused image. Photograph only, no text, no typography, no borders, no logos.",
+  "model": "soul_2"
+ },
+ {
+  "name": "collections/limited-edition",
+  "aspect_ratio": "3:4",
+  "prompt": "Dramatic editorial fashion photograph, close three-quarter view of a man wearing a dark ink diamond-quilted liner vest with brass snap buttons over a charcoal knit, a hard slash of late sunlight across the quilting, deep olive-black shadow background, moody and precise. Medium format film, natural light, soft grain. Photograph only, no text, no typography, no borders, no logos.",
+  "model": "soul_2"
+ },
+ {
+  "name": "products/arden-overcoat-camel",
+  "aspect_ratio": "3:4",
+  "prompt": "Studio e-commerce fashion photograph, a woman wearing a long camel wool overcoat, single-breasted, over a cream knit and dark trousers, against a seamless warm bone-coloured paper backdrop, soft diffused daylight from the left, full length head to toe, neutral relaxed pose, clean minimal product-focused image. Photograph only, no text, no typography, no borders, no logos.",
+  "model": "soul_2"
+ },
+ {
+  "name": "products/arden-overcoat-charcoal",
+  "aspect_ratio": "3:4",
+  "prompt": "Studio e-commerce fashion photograph, a woman wearing a long charcoal grey wool overcoat, single-breasted, over a cream knit and dark trousers, against a seamless warm bone-coloured paper backdrop, soft diffused daylight from the left, full length head to toe, neutral relaxed pose, clean minimal product-focused image. Photograph only, no text, no typography, no borders, no logos.",
+  "model": "soul_2"
+ },
+ {
+  "name": "products/field-chore-jacket-loden",
+  "aspect_ratio": "3:4",
+  "prompt": "Studio e-commerce fashion photograph, a man wearing a loden olive-green cotton twill chore jacket with three patch pockets and horn buttons, over a white t-shirt, with ecru trousers, against a seamless warm bone-coloured paper backdrop, soft diffused daylight from the left, three-quarter length crop from head to knee, neutral relaxed pose, clean minimal product-focused image. Photograph only, no text, no typography, no borders, no logos.",
+  "model": "soul_2"
+ },
+ {
+  "name": "products/field-chore-jacket-ecru",
+  "aspect_ratio": "3:4",
+  "prompt": "Studio e-commerce fashion photograph, a man wearing an ecru off-white cotton twill chore jacket with three patch pockets and horn buttons, over a white t-shirt, with dark indigo jeans, against a seamless warm bone-coloured paper backdrop, soft diffused daylight from the left, three-quarter length crop from head to knee, neutral relaxed pose, clean minimal product-focused image. Photograph only, no text, no typography, no borders, no logos.",
+  "model": "soul_2"
+ },
+ {
+  "name": "products/kiln-hoodie-bone",
+  "aspect_ratio": "3:4",
+  "prompt": "Studio e-commerce fashion photograph, a man wearing a plain bone off-white heavyweight cotton hoodie, boxy fit, no print, with olive trousers, against a seamless warm bone-coloured paper backdrop, soft diffused daylight from the left, three-quarter length crop from head to knee, neutral relaxed pose, clean minimal product-focused image. Photograph only, no text, no typography, no borders, no logos.",
+  "model": "soul_2"
+ },
+ {
+  "name": "products/kiln-hoodie-ink",
+  "aspect_ratio": "3:4",
+  "prompt": "Studio e-commerce fashion photograph, a woman wearing a plain black heavyweight cotton hoodie, boxy oversized fit, no print, with ecru trousers, against a seamless warm bone-coloured paper backdrop, soft diffused daylight from the left, three-quarter length crop from head to knee, neutral relaxed pose, clean minimal product-focused image. Photograph only, no text, no typography, no borders, no logos.",
+  "model": "soul_2"
+ },
+ {
+  "name": "products/slate-tee-white",
+  "aspect_ratio": "3:4",
+  "prompt": "Studio e-commerce fashion photograph, a woman wearing a plain white heavyweight boxy t-shirt, no print, with dark indigo jeans, against a seamless warm bone-coloured paper backdrop, soft diffused daylight from the left, three-quarter length crop from head to hip, neutral relaxed pose, clean minimal product-focused image. Photograph only, no text, no typography, no borders, no logos.",
+  "model": "soul_2"
+ },
+ {
+  "name": "products/slate-tee-ink",
+  "aspect_ratio": "3:4",
+  "prompt": "Studio e-commerce fashion photograph, a man wearing a plain black heavyweight boxy t-shirt, no print, with ecru trousers, against a seamless warm bone-coloured paper backdrop, soft diffused daylight from the left, three-quarter length crop from head to hip, neutral relaxed pose, clean minimal product-focused image. Photograph only, no text, no typography, no borders, no logos.",
+  "model": "soul_2"
+ },
+ {
+  "name": "products/oxford-shirt-blue",
+  "aspect_ratio": "3:4",
+  "prompt": "Studio e-commerce fashion photograph, a man wearing a pale blue cotton oxford button-down shirt, untucked, with ecru trousers, against a seamless warm bone-coloured paper backdrop, soft diffused daylight from the left, three-quarter length crop from head to hip, neutral relaxed pose, clean minimal product-focused image. Photograph only, no text, no typography, no borders, no logos.",
+  "model": "soul_2"
+ },
+ {
+  "name": "products/oxford-shirt-white",
+  "aspect_ratio": "3:4",
+  "prompt": "Studio e-commerce fashion photograph, a man wearing a crisp white cotton oxford button-down shirt, untucked, with dark indigo jeans, against a seamless warm bone-coloured paper backdrop, soft diffused daylight from the left, three-quarter length crop from head to hip, neutral relaxed pose, clean minimal product-focused image. Photograph only, no text, no typography, no borders, no logos.",
+  "model": "soul_2"
+ },
+ {
+  "name": "products/poplin-shirt-white",
+  "aspect_ratio": "3:4",
+  "prompt": "Studio e-commerce fashion photograph, a woman wearing an oversized crisp white cotton poplin shirt with a relaxed collar, half tucked into charcoal trousers, against a seamless warm bone-coloured paper backdrop, soft diffused daylight from the left, three-quarter length crop from head to hip, neutral relaxed pose, clean minimal product-focused image. Photograph only, no text, no typography, no borders, no logos.",
+  "model": "soul_2"
+ },
+ {
+  "name": "products/poplin-shirt-stripe",
+  "aspect_ratio": "3:4",
+  "prompt": "Studio e-commerce fashion photograph, a woman wearing an oversized blue and white fine-striped cotton poplin shirt with a relaxed collar, half tucked into ecru trousers, against a seamless warm bone-coloured paper backdrop, soft diffused daylight from the left, three-quarter length crop from head to hip, neutral relaxed pose, clean minimal product-focused image. Photograph only, no text, no typography, no borders, no logos.",
+  "model": "soul_2"
+ },
+ {
+  "name": "products/pleated-trouser-charcoal",
+  "aspect_ratio": "3:4",
+  "prompt": "Studio e-commerce fashion photograph, a woman wearing charcoal grey wool wide-leg trousers with double front pleats and a high waist, with a white t-shirt tucked in and black loafers, against a seamless warm bone-coloured paper backdrop, soft diffused daylight from the left, cropped from waist to feet, neutral relaxed pose, clean minimal product-focused image. Photograph only, no text, no typography, no borders, no logos.",
+  "model": "soul_2"
+ },
+ {
+  "name": "products/pleated-trouser-ecru",
+  "aspect_ratio": "3:4",
+  "prompt": "Studio e-commerce fashion photograph, a woman wearing ecru off-white wide-leg trousers with double front pleats and a high waist, with a black t-shirt tucked in and tan loafers, against a seamless warm bone-coloured paper backdrop, soft diffused daylight from the left, cropped from waist to feet, neutral relaxed pose, clean minimal product-focused image. Photograph only, no text, no typography, no borders, no logos.",
+  "model": "soul_2"
+ },
+ {
+  "name": "products/work-trouser-loden",
+  "aspect_ratio": "3:4",
+  "prompt": "Studio e-commerce fashion photograph, a man wearing loden olive-green cotton twill tapered work trousers with a white t-shirt and brown suede chelsea boots, against a seamless warm bone-coloured paper backdrop, soft diffused daylight from the left, cropped from waist to feet, neutral relaxed pose, clean minimal product-focused image. Photograph only, no text, no typography, no borders, no logos.",
+  "model": "soul_2"
+ },
+ {
+  "name": "products/work-trouser-ink",
+  "aspect_ratio": "3:4",
+  "prompt": "Studio e-commerce fashion photograph, a man wearing black cotton twill tapered work trousers with a white t-shirt and white leather sneakers, against a seamless warm bone-coloured paper backdrop, soft diffused daylight from the left, cropped from waist to feet, neutral relaxed pose, clean minimal product-focused image. Photograph only, no text, no typography, no borders, no logos.",
+  "model": "soul_2"
+ },
+ {
+  "name": "products/selvedge-jean-indigo",
+  "aspect_ratio": "3:4",
+  "prompt": "Studio e-commerce fashion photograph, a man wearing dark raw indigo straight-leg selvedge denim jeans with a turned cuff showing the red selvedge line, with a white t-shirt and white leather sneakers, against a seamless warm bone-coloured paper backdrop, soft diffused daylight from the left, cropped from waist to feet, neutral relaxed pose, clean minimal product-focused image. Photograph only, no text, no typography, no borders, no logos.",
+  "model": "soul_2"
+ },
+ {
+  "name": "products/selvedge-jean-detail",
+  "aspect_ratio": "3:4",
+  "prompt": "Close-up product detail photograph of the turned cuff of dark raw indigo selvedge denim jeans showing the white and red selvedge edge and chain-stitched hem, resting on a warm bone-coloured surface, soft daylight, crisp fabric texture. Photograph only, no text, no typography, no borders, no logos.",
+  "model": "soul_2"
+ },
+ {
+  "name": "products/barrel-jean-blue",
+  "aspect_ratio": "3:4",
+  "prompt": "Studio e-commerce fashion photograph, a woman wearing mid-blue washed high-rise barrel-leg denim jeans with a white t-shirt tucked in and tan leather loafers, against a seamless warm bone-coloured paper backdrop, soft diffused daylight from the left, cropped from waist to feet, neutral relaxed pose, clean minimal product-focused image. Photograph only, no text, no typography, no borders, no logos.",
+  "model": "soul_2"
+ },
+ {
+  "name": "products/barrel-jean-back",
+  "aspect_ratio": "3:4",
+  "prompt": "Studio e-commerce fashion photograph, rear view of a woman wearing mid-blue washed high-rise barrel-leg denim jeans with plain back pockets, a white t-shirt tucked in and tan leather loafers, against a seamless warm bone-coloured paper backdrop, soft diffused daylight from the left, cropped from waist to feet, neutral relaxed pose, clean minimal product-focused image. Photograph only, no text, no typography, no borders, no logos.",
+  "model": "soul_2"
+ },
+ {
+  "name": "products/court-sneaker-white",
+  "aspect_ratio": "3:4",
+  "prompt": "Studio product still life photograph, a pair of minimal white full-grain leather low-top court sneakers with white rubber cupsoles and no branding, three-quarter side view, on a warm bone-coloured seamless paper surface and backdrop, soft diffused daylight from the left with a gentle shadow, centred, clean minimal e-commerce image. Photograph only, no text, no typography, no borders, no logos.",
+  "model": "soul_2"
+ },
+ {
+  "name": "products/court-sneaker-ink",
+  "aspect_ratio": "3:4",
+  "prompt": "Studio product still life photograph, a pair of minimal black full-grain leather low-top court sneakers with off-white rubber cupsoles and no branding, three-quarter side view, on a warm bone-coloured seamless paper surface and backdrop, soft diffused daylight from the left with a gentle shadow, centred, clean minimal e-commerce image. Photograph only, no text, no typography, no borders, no logos.",
+  "model": "soul_2"
+ },
+ {
+  "name": "products/ridge-boot-brown",
+  "aspect_ratio": "3:4",
+  "prompt": "Studio product still life photograph, a pair of dark brown suede chelsea boots with elastic side gussets and a leather sole, three-quarter side view, on a warm bone-coloured seamless paper surface and backdrop, soft diffused daylight from the left with a gentle shadow, centred, clean minimal e-commerce image. Photograph only, no text, no typography, no borders, no logos.",
+  "model": "soul_2"
+ },
+ {
+  "name": "products/ridge-boot-worn",
+  "aspect_ratio": "3:4",
+  "prompt": "Studio e-commerce fashion photograph, close view of a man wearing dark brown suede chelsea boots with loden olive tapered trousers, against a seamless warm bone-coloured paper backdrop, soft diffused daylight from the left, cropped from knee to feet, neutral relaxed pose, clean minimal product-focused image. Photograph only, no text, no typography, no borders, no logos.",
+  "model": "soul_2"
+ },
+ {
+  "name": "products/merino-beanie-ink",
+  "aspect_ratio": "3:4",
+  "prompt": "Studio e-commerce fashion photograph, a man wearing a black ribbed merino wool beanie with a turned cuff and a charcoal knit sweater, against a seamless warm bone-coloured paper backdrop, soft diffused daylight from the left, head and shoulders portrait crop, neutral relaxed pose, clean minimal product-focused image. Photograph only, no text, no typography, no borders, no logos.",
+  "model": "soul_2"
+ },
+ {
+  "name": "products/merino-beanie-ochre",
+  "aspect_ratio": "3:4",
+  "prompt": "Studio product still life photograph, a single ochre brass-yellow ribbed merino wool beanie with a turned cuff, laid flat, top view, on a warm bone-coloured seamless paper surface and backdrop, soft diffused daylight from the left with a gentle shadow, centred, clean minimal e-commerce image. Photograph only, no text, no typography, no borders, no logos.",
+  "model": "soul_2"
+ },
+ {
+  "name": "products/market-tote-ecru",
+  "aspect_ratio": "3:4",
+  "prompt": "Studio e-commerce fashion photograph, a woman carrying a large plain ecru heavy cotton canvas tote bag with long tan leather handles on her shoulder, wearing a white shirt and dark trousers, no print on the bag, against a seamless warm bone-coloured paper backdrop, soft diffused daylight from the left, three-quarter length crop from shoulder to knee, neutral relaxed pose, clean minimal product-focused image. Photograph only, no text, no typography, no borders, no logos.",
+  "model": "soul_2"
+ },
+ {
+  "name": "products/market-tote-still",
+  "aspect_ratio": "3:4",
+  "prompt": "Studio product still life photograph, a large plain ecru heavy cotton canvas tote bag with long tan leather handles standing upright, front view, no print, on a warm bone-coloured seamless paper surface and backdrop, soft diffused daylight from the left with a gentle shadow, centred, clean minimal e-commerce image. Photograph only, no text, no typography, no borders, no logos.",
+  "model": "soul_2"
+ },
+ {
+  "name": "products/liner-vest-ink",
+  "aspect_ratio": "3:4",
+  "prompt": "Studio e-commerce fashion photograph, a man wearing a black diamond-quilted collarless liner vest with brass snap buttons over a bone off-white long-sleeve t-shirt, with dark trousers, against a seamless warm bone-coloured paper backdrop, soft diffused daylight from the left, three-quarter length crop from head to hip, neutral relaxed pose, clean minimal product-focused image. Photograph only, no text, no typography, no borders, no logos.",
+  "model": "soul_2"
+ },
+ {
+  "name": "products/liner-vest-loden",
+  "aspect_ratio": "3:4",
+  "prompt": "Studio e-commerce fashion photograph, a woman wearing a loden olive-green diamond-quilted collarless liner vest with brass snap buttons over a white long-sleeve t-shirt, with ecru trousers, against a seamless warm bone-coloured paper backdrop, soft diffused daylight from the left, three-quarter length crop from head to hip, neutral relaxed pose, clean minimal product-focused image. Photograph only, no text, no typography, no borders, no logos.",
+  "model": "soul_2"
+ },
+ {
+  "name": "products/wrap-trench-stone",
+  "aspect_ratio": "3:4",
+  "prompt": "Studio e-commerce fashion photograph, a woman wearing a long stone-beige cotton gabardine trench coat with a tied belt and storm flap, over a white shirt and dark trousers, against a seamless warm bone-coloured paper backdrop, soft diffused daylight from the left, full length head to toe, neutral relaxed pose, clean minimal product-focused image. Photograph only, no text, no typography, no borders, no logos.",
+  "model": "soul_2"
+ },
+ {
+  "name": "products/wrap-trench-detail",
+  "aspect_ratio": "3:4",
+  "prompt": "Close-up product detail photograph of the tied belt, horn buckle and storm flap of a stone-beige cotton gabardine trench coat worn by a woman, warm bone-coloured studio backdrop, soft daylight, crisp fabric texture. Photograph only, no text, no typography, no borders, no logos.",
+  "model": "soul_2"
+ }
+]
