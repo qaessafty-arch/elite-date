@@ -382,6 +382,8 @@ async function adminFlow() {
     await row.getByText('Saved').waitFor();
     const q = (await sql(`select i.quantity from product_variants v join inventory i on i.variant_id = v.id where v.product_id = $1 and v.color = 'Moss' and v.size = 'S'`, [productId]))[0];
     assert(q.quantity === 3, `quantity is ${q.quantity}`);
+    // The browser blocks negative input (min=0); the server must refuse it too.
+    await row.getByRole('spinbutton').evaluate((el) => el.removeAttribute('min'));
     await row.getByRole('spinbutton').fill('-4');
     await row.getByRole('button', { name: 'Save' }).click();
     await row.getByText('Stock cannot be negative.').waitFor();
@@ -392,11 +394,11 @@ async function adminFlow() {
     await page.goto(`${BASE}/admin/orders?q=${order.number}`);
     await page.getByRole('link', { name: order.number }).click();
     await page.getByRole('heading', { name: `Order ${order.number}` }).waitFor();
-    await L(page, 'Status').selectOption('processing');
+    await page.locator('main select[name=status]').selectOption('processing');
     await page.getByRole('button', { name: 'Update status' }).click();
     await page.getByText('Status updated.').waitFor();
-    await L(page, 'Carrier').fill('UPS');
-    await L(page, 'Tracking number').fill('1ZE2E000111');
+    await L(page, /^Carrier/).fill('UPS');
+    await L(page, /^Tracking number/).fill('1ZE2E000111');
     await page.getByRole('button', { name: 'Save tracking' }).click();
     await page.getByText('Tracking saved.').waitFor();
     await L(page, /Amount, up to/).fill('10.00');
@@ -412,12 +414,12 @@ async function adminFlow() {
   await step('admin: create a coupon', async () => {
     await page.goto(`${BASE}/admin/promotions`);
     const form = page.locator('section', { hasText: 'Create a coupon' }).last();
-    await form.getByLabel('Code').fill(couponCode);
-    await form.getByLabel('Discount type').selectOption('percent');
-    await form.getByLabel('Value').fill('150');
+    await form.locator('[name=code]').fill(couponCode);
+    await form.locator('[name=kind]').selectOption('percent');
+    await form.locator('[name=value]').fill('150');
     await form.getByRole('button', { name: 'Create coupon' }).click();
     await form.getByText('A percentage cannot be more than 100.').waitFor();
-    await form.getByLabel('Value').fill('15');
+    await form.locator('[name=value]').fill('15');
     await form.getByRole('button', { name: 'Create coupon' }).click();
     await page.getByText(`Coupon ${couponCode} created.`).waitFor();
     const c = (await sql('select kind, value from coupons where code = $1', [couponCode]))[0];
@@ -427,7 +429,7 @@ async function adminFlow() {
   await step('admin: change a store setting and see it on the storefront, then restore it', async () => {
     await page.goto(`${BASE}/admin/settings`);
     const panel = page.locator('section', { hasText: 'Announcement bar' }).first();
-    const box = panel.getByLabel('Messages, one per line');
+    const box = panel.locator('[name=messages]');
     const original = await box.inputValue();
     await box.fill('E2E announcement check');
     await panel.getByRole('button', { name: 'Save announcements' }).click();
