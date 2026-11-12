@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from 'next';
+import { cookies } from 'next/headers';
 import './globals.css';
 import { getSettings, siteUrl } from '@/lib/settings';
 
@@ -28,14 +29,12 @@ export const viewport: Viewport = {
 };
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
-  const { theme } = await getSettings();
-  // Applies the saved theme before paint so there is no flash. Static string, no user input.
-  const themeScript = `try{var t=localStorage.getItem('theme')||'${theme.defaultTheme === 'dark' ? 'dark' : 'light'}';document.documentElement.dataset.theme=t}catch(e){}`;
+  // The visitor's theme choice lives in a cookie so the server can render it with no flash and no inline script.
+  const [{ theme }, jar] = await Promise.all([getSettings(), cookies()]);
+  const saved = jar.get('theme')?.value;
+  const active = saved === 'dark' || saved === 'light' ? saved : theme.defaultTheme;
   return (
-    <html lang="en" data-theme={theme.defaultTheme} suppressHydrationWarning>
-      <head>
-        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
-      </head>
+    <html lang="en" data-theme={active}>
       <body>{children}</body>
     </html>
   );

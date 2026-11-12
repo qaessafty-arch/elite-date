@@ -6,7 +6,11 @@ import { headers } from 'next/headers';
  */
 const buckets = new Map<string, { count: number; resetAt: number }>();
 
+/** Local test runs can switch limits off. The flag is ignored in production. */
+const disabled = () => process.env.NODE_ENV !== 'production' && process.env.DISABLE_RATE_LIMIT === 'true';
+
 export function rateLimit(key: string, limit: number, windowMs: number): boolean {
+  if (disabled()) return true;
   const now = Date.now();
   const bucket = buckets.get(key);
   if (!bucket || bucket.resetAt < now) {

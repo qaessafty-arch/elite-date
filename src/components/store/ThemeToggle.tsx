@@ -13,9 +13,7 @@ export function ThemeToggle() {
   const flip = () => {
     const next = theme === 'dark' ? 'light' : 'dark';
     document.documentElement.dataset.theme = next;
-    try {
-      localStorage.setItem('theme', next);
-    } catch {}
+    document.cookie = `theme=${next}; path=/; max-age=31536000; samesite=lax`;
     setTheme(next);
   };
 

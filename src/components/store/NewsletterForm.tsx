@@ -1,11 +1,11 @@
 'use client';
 
 import Link from 'next/link';
-import { useActionState } from 'react';
+import { useFormAction } from '../useFormAction';
 import { subscribeNewsletterAction } from '@/app/actions/cart';
 
 export function NewsletterForm() {
-  const [state, action, pending] = useActionState(subscribeNewsletterAction, null);
+  const { state, pending, onSubmit } = useFormAction(subscribeNewsletterAction, null);
 
   if (state?.ok) {
     return (
@@ -15,7 +15,7 @@ export function NewsletterForm() {
     );
   }
   return (
-    <form action={action} className="mt-6 max-w-md" noValidate>
+    <form onSubmit={onSubmit} className="mt-6 max-w-md" noValidate>
       <label htmlFor="newsletter-email" className="label mb-2 block">
         Email address
       </label>

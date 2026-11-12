@@ -1,10 +1,11 @@
 'use client';
 
-import { useActionState, useState } from 'react';
+import { useState } from 'react';
+import { useFormAction } from '../useFormAction';
 import { submitReviewAction } from '@/app/actions/catalog';
 
 export function ReviewForm({ productId }: { productId: string }) {
-  const [state, action, pending] = useActionState(submitReviewAction, null);
+  const { state, pending, onSubmit } = useFormAction(submitReviewAction, null);
   const [rating, setRating] = useState(5);
   if (state?.ok)
     return (
@@ -13,7 +14,7 @@ export function ReviewForm({ productId }: { productId: string }) {
       </p>
     );
   return (
-    <form action={action} className="grid max-w-lg gap-4">
+    <form onSubmit={onSubmit} className="grid max-w-lg gap-4">
       <input type="hidden" name="productId" value={productId} />
       <fieldset>
         <legend className="label mb-2">Your rating</legend>

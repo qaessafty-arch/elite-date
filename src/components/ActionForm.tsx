@@ -1,6 +1,7 @@
 'use client';
 
-import { useActionState, useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
+import { useFormAction } from './useFormAction';
 
 export type ActionState = { ok: boolean; message: string; fields?: Record<string, string> } | null;
 
@@ -16,6 +17,10 @@ export type FieldSpec = {
   half?: boolean;
   checkbox?: boolean;
   defaultChecked?: boolean;
+  textarea?: boolean;
+  step?: string;
+  min?: string;
+  placeholder?: string;
 };
 
 /**
@@ -39,7 +44,7 @@ export function ActionForm({
   resetOnSuccess?: boolean;
   children?: React.ReactNode;
 }) {
-  const [state, formAction, pending] = useActionState(action, null);
+  const { state, pending, onSubmit } = useFormAction(action, null);
   const form = useRef<HTMLFormElement>(null);
 
   useEffect(() => {
@@ -50,7 +55,7 @@ export function ActionForm({
   }, [state, resetOnSuccess]);
 
   return (
-    <form ref={form} action={formAction} className="grid gap-4 sm:grid-cols-2" noValidate>
+    <form ref={form} onSubmit={onSubmit} className="grid gap-4 sm:grid-cols-2" noValidate>
       {Object.entries(hidden).map(([k, v]) => (
         <input key={k} type="hidden" name={k} value={v} />
       ))}
@@ -78,8 +83,13 @@ export function ActionForm({
                   </option>
                 ))}
               </select>
+            ) : f.textarea ? (
+              <textarea id={id} name={f.name} className="input min-h-28" defaultValue={f.defaultValue} required={f.required !== false} aria-invalid={!!err} />
             ) : (
               <input
+                step={f.step}
+                min={f.min}
+                placeholder={f.placeholder}
                 id={id}
                 name={f.name}
                 type={f.type ?? 'text'}

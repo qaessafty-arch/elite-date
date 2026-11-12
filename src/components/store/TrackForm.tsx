@@ -1,17 +1,17 @@
 'use client';
 
-import { useActionState } from 'react';
+import { useFormAction } from '../useFormAction';
 import { trackOrderAction } from '@/app/actions/checkout';
 
 const STEPS = ['confirmed', 'processing', 'shipped', 'delivered'];
 const LABELS: Record<string, string> = { confirmed: 'Confirmed', processing: 'Being prepared', shipped: 'Shipped', delivered: 'Delivered' };
 
 export function TrackForm() {
-  const [state, action, pending] = useActionState(trackOrderAction, null);
+  const { state, pending, onSubmit } = useFormAction(trackOrderAction, null);
   const reached = state?.order ? STEPS.indexOf(state.order.status) : -1;
   return (
     <>
-      <form action={action} className="grid gap-4 sm:grid-cols-[1fr_1fr_auto] sm:items-end">
+      <form onSubmit={onSubmit} className="grid gap-4 sm:grid-cols-[1fr_1fr_auto] sm:items-end">
         <label className="field">
           <span>Order number</span>
           <input name="number" className="input uppercase placeholder:normal-case" placeholder="HD-XXXXXXXX" required maxLength={20} autoComplete="off" />
