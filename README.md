@@ -104,6 +104,10 @@ Notes for production:
 - **Rate limiting** is in-memory per process. With several instances, back `src/lib/rate-limit.ts` with Redis.
 - Sessions are HTTP-only, SameSite=Lax cookies holding a random token; only its SHA-256 hash is stored.
 
+## Static preview link
+
+`npm run preview:static` builds a script-free snapshot of the storefront into `preview-dist/` for sharing as a link where no server is available. It needs the production server running on port 3100 (`npm run build`, then `npm start -- -p 3100`). Every product, collection and info page is included; the bag, checkout, search, filters, accounts and admin need the full deployment and point to a page that says so.
+
 ## Project layout
 
 ```

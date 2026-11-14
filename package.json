@@ -12,7 +12,8 @@
     "db:reset": "tsx scripts/migrate.ts --reset && tsx scripts/seed.ts",
     "test": "vitest run",
     "test:e2e": "node tests/e2e/run.mjs",
-    "images": "node scripts/images.mjs"
+    "images": "node scripts/images.mjs",
+    "preview:static": "node scripts/static-preview.mjs preview-dist http://localhost:3100"
   },
   "dependencies": {
     "@fontsource-variable/bodoni-moda": "^5.3.0",

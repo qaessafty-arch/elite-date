@@ -13,3 +13,4 @@ assets-src/**/*.png
 tests/e2e/screenshots
 .DS_Store
 tests/e2e/tmp
+preview-dist
